@@ -1,10 +1,11 @@
 ## End to End Machine Learning Project
 
     Create a new Folder and give it a name.
-    Open Anaconda, navigate to the folder and use following command:
-    code .
+    
+    On Anaconda, navigate to the folder and use following command:
+        >> code .
 
-    Open CMD in VS code and start typing following commands:
+    On VS code, open CMD and start typing following commands:
 
         >> conda create -p venv python==3.8 -y
         >> conda activate venv/
@@ -42,6 +43,18 @@
             - do the setup by filling author, project name, email, etc.
                 (find_package() to locate external libraries)
             - through src folder, setup is able to identify and build package.
+            - create a function to read all libraries from "requirements.txt" 
+                rather than mentioning them here in a list.
+            - this function reads "\n" as well from the "requirements.txt" file,
+                which should be avoided.
 
         Create a new folder "src",
             - create a file named "__init__.py" inside it.
+                (All these folders with "__init__.py" file will help in identifying package)
+
+        How to fill "requirements.txt" file?
+            - '-e .' helps to enable running the setup.py file.
+
+        >> pip install - requirements.txt (to build the complete package,
+                                           '-e .' will disappear from "requires.txt" file of package info)
+        
