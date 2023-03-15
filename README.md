@@ -1,5 +1,15 @@
 ## End to End Machine Learning Project
 
+### Task:
+
+# Task
+
+1. Setup github repository
+    - new environment
+    - setup.py
+    - requirements.txt
+2. Src folder and build the package
+
     Create a new Folder and give it a name.
     
     On Anaconda, navigate to the folder and use following command:
