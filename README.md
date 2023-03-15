@@ -30,3 +30,18 @@
                name it ".gitignore" -- select "Python" language -- Commit.
 
         >> git pull
+
+    On VS code,
+
+        Create two files :
+            1. "requirements.txt" (lists dependencies to install for Python project using pip).
+            2. "setup.py" (create machine learning application as a package and distribute).
+
+        How to fill "setup.py" file?
+            - start with imports
+            - do the setup by filling author, project name, email, etc.
+                (find_package() to locate external libraries)
+            - through src folder, setup is able to identify and build package.
+
+        Create a new folder "src",
+            - create a file named "__init__.py" inside it.
