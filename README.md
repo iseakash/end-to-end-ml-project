@@ -1,8 +1,6 @@
 ## End to End Machine Learning Project
 
-### Task:
-
-# Task
+### Task:4
 
 1. Setup github repository
     - new environment
