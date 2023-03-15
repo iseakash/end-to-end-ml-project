@@ -1,6 +1,6 @@
 ## End to End Machine Learning Project
 
-''' Create a new Folder
+    Create a new Folder and give it a name.
     Open Anaconda, navigate to the folder and use following command:
     code .
 
@@ -17,4 +17,12 @@
         >> git branch -M main
         >> git remote add origin https://github.com/iseakash/end-to-end-ml-project.git
         >> git remote -v
-'''
+
+            For those starting out first time:
+            Google : "git global config"
+            >> git config --global user.name "John Doe"
+            >> git config --global user.email johndoe@example.com
+            >> git config --global user.email (should give your new email id)
+
+        >> git push -u origin main
+        
