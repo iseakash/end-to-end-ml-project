@@ -9,9 +9,7 @@
 2. Src folder and build the package
 
     
-    > Create a new Folder and give it a name.
-    
-    On Anaconda, navigate to the folder and use following command:
+    On Anaconda, navigate to the folder (Create a new folder) and use following command:
         >> code .
 
     On VS code, open CMD and start typing following commands:
