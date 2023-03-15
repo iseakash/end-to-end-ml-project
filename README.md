@@ -25,4 +25,8 @@
             >> git config --global user.email (should give your new email id)
 
         >> git push -u origin main
-        
+
+    On Github, select "Add file" -- "Create new file"
+               name it ".gitignore" -- select "Python" language -- Commit.
+
+        >> git pull
