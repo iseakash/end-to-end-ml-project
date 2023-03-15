@@ -8,6 +8,7 @@
     - requirements.txt
 2. Src folder and build the package
 
+    
     Create a new Folder and give it a name.
     
     On Anaconda, navigate to the folder and use following command:
