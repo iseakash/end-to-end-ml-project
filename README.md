@@ -9,6 +9,8 @@
 2. Src folder and build the package
 
     
+
+    
     On Anaconda, navigate to the folder (Create a new folder) and use following command:
         >> code .
 
