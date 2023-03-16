@@ -9,6 +9,8 @@
 2. Src folder and build the package
     __________________________________________________________________________________________
 
+Step 1:
+
     On Anaconda, navigate to the folder (Create a new folder) and use following command:
         >> code .
 
@@ -65,3 +67,35 @@
         >> pip install - requirements.txt (to build the complete package,
                                            '-e .' will disappear from "requires.txt" file of package info)
         
+Step 2:
+
+    On VS code, in src folder:
+    
+        Create a new folder named "components" with "__init__.py" file.
+            - The benefit of having component folder is containing all the modules at one place,
+                eg., data ingestion, data processing, model training, etc.
+
+        Create a new folder named "pipeline" with "__init__.py" file.
+            - Create sub folders namely, "predict_pipeline.py" and "train_pipeline.py".
+
+        Create three additional files,
+            - logger.py (to record and monitor events, errors, and other information during runtime)
+            - exception.py (to handle specific error conditions and improve code robustness)
+            - utils.py (a file containing various helper functions or tools for a specific project)
+        
+        How to fill "exception.py" file?
+            - Purpose: Creating custom exception with detailed error message using sys module.
+            - import a library sys
+            - exc_info() (Gives exception type, value, and traceback where traceback contains all details
+                 related to error like filename, error line, etc.)
+            - Google "custom exception handling in python read documentation".
+            - "CustomException" class (define a custom exception that includes a detailed error message).
+            - super().__init__(error_message) (sets the exception message to the provided error message).
+
+        How to fill "logger.py" file?
+            - Purpose: To record events and messages in a python project for monitoring and debugging.
+            - import libraries like logging, datetime, os.
+            - logging.basicConfig() (configures the basic logging system).
+            - severity levels can be INFO, WARNING, ERROR, and CRITICAL where INFO is the minimum.
+                (DEBUG is even lower than INFO)
+
