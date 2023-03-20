@@ -7,6 +7,7 @@
     - setup.py
     - requirements.txt
 2. Src folder and build the package
+3. Component folder and code the data ingestion, data tranformation and model training.
     __________________________________________________________________________________________
 
 Step 1:
@@ -99,3 +100,19 @@ Step 2:
             - severity levels can be INFO, WARNING, ERROR, and CRITICAL where INFO is the minimum.
                 (DEBUG is even lower than INFO)
 
+Step 3:
+
+    On VS code, in src\components folder:
+
+        How to fill "data_ingestion.py" file?
+            - Aim: Read & Split the data from different data source (created by big data or cloud team).
+            - At first, import all libraries (os, sys, logs, exception, pandas, sklearn, dataclasses).
+            - Second, create a class for storing input data related details (eg., location of data files).
+            - Third, using dataclass a decorator to avoid using __init__ to declare class variables and
+                when you just need to declare varibles in a class and no functions.
+            - Fourth, for beginner - it's better to create this DataIngestionConfig class rather than
+                creating a new 'config' folder.
+            - Fifth, create the DataIngestion class which includes:
+                > initiating path varibales and making new directories,
+                > reading raw data file and saving train-test data files,
+                > logging the details and raising the exceptions.
