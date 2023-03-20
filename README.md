@@ -116,3 +116,4 @@ Step 3:
                 > initiating path varibales and making new directories,
                 > reading raw data file and saving train-test data files,
                 > logging the details and raising the exceptions.
+            - Add .artifacts in the .gitignore file in the Environments to avoid data save.
