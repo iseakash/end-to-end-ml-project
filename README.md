@@ -117,3 +117,21 @@ Step 3:
                 > reading raw data file and saving train-test data files,
                 > logging the details and raising the exceptions.
             - Add .artifacts in the .gitignore file in the Environments to avoid data save.
+
+        How to fill "data_transformation.py" file?
+            - Aim: Perform feature engineering, data cleaning, handle categorical data, etc.
+            - Use ColumnTransformer to create the data transformation pipeline.
+            - At first, import libraries like Pipeline, SimpleImputer, OneHotEncoder, StandardScaler, etc.
+            - Second, create a class DataTransformationConfig for all transformation related varibales.
+            - Third, create preprocessor object path to store the model in pickle file at some location.
+            - Fourth, create get_data_transformer_object() function to create all the pickle files responsible
+                for categorical encoding, scaling , etc.
+            - Fifth, create pipeline for numerical (impute, scale) and categorical (encode, impute, scale) features.
+            - Sixth, create ColumnTransformer object - a combination of num and cat pipeline.
+            - Seventh, call the save_object() function to save datatransformer pickle file.
+            - np.c_ is a function used to concatenate arrays along the second axis (100, 4) & (100,) ~ (100, 5).
+
+        How to fill "utils.py" file?
+            - Aim: To store all the common functions that are used in the project.
+            - At first, Use "dill" library to create pickle file.
+            - Second, create save_object() function to save the pickle file at desired location.
