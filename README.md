@@ -100,6 +100,12 @@ Step 2:
             - severity levels can be INFO, WARNING, ERROR, and CRITICAL where INFO is the minimum.
                 (DEBUG is even lower than INFO)
 
+        How to fill "utils.py" file?
+            - Aim: To store all the common functions that are used in the project.
+            - At first, Use "dill" library to create pickle file.
+            - Second, create save_object() function to save the pickle file at desired location.
+            - Third, create evaluate_models() function to generate model performance report.
+
 Step 3:
 
     On VS code, in src\components folder:
@@ -138,13 +144,4 @@ Step 3:
             - Second, create two classes: 1. "ModelTrainerConfig" (for model path) & 2. "ModelTrainer".
             - Third, In "ModelTrainer" class, initiate a function initite_model_trainer() which declares
                 X-y split, all models, evaluation report and finds best model, save model and return R2.
-
-Step 4:
-
-    On VS code, in src folder:
-
-        How to fill "utils.py" file?
-            - Aim: To store all the common functions that are used in the project.
-            - At first, Use "dill" library to create pickle file.
-            - Second, create save_object() function to save the pickle file at desired location.
-            - Third, create evaluate_models() function to generate model performance report.
+                
