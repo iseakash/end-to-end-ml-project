@@ -131,6 +131,16 @@ Step 3:
             - Seventh, call the save_object() function to save datatransformer pickle file.
             - np.c_ is a function used to concatenate arrays along the second axis (100, 4) & (100,) ~ (100, 5).
 
+        How to fill "model_trainer.py" file?
+            - Aim: Train multiple models and check their performances.
+            - Models: Linear Regression, KNN, Decision tree, XG Boost, Catboost and ensemble models like adaboost.
+            - At first, import all libraries (os, sys, logs, exception, utils, sklearn, dataclasses).
+            - Second, create two classes: 1. "ModelTrainerConfig" (for model path) & 2. "ModelTrainer".
+            - Third, In "ModelTrainer" class, initiate a function initite_model_trainer() which declares
+                X-y split, all models, evaluation report and finds best model, save model and return R2.
+
+    On VS code, in src folder:
+
         How to fill "utils.py" file?
             - Aim: To store all the common functions that are used in the project.
             - At first, Use "dill" library to create pickle file.
