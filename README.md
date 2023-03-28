@@ -105,6 +105,7 @@ Step 2:
             - At first, Use "dill" library to create pickle file.
             - Second, create save_object() function to save the pickle file at desired location.
             - Third, create evaluate_models() function to generate model performance report.
+            - Fourth, in evaluate_models() function also add GridSearchCV() for hyperparameter tuning.
 
 Step 3:
 
@@ -144,4 +145,5 @@ Step 3:
             - Second, create two classes: 1. "ModelTrainerConfig" (for model path) & 2. "ModelTrainer".
             - Third, In "ModelTrainer" class, initiate a function initite_model_trainer() which declares
                 X-y split, all models, evaluation report and finds best model, save model and return R2.
-                
+            - Fourth, in the function initite_model_trainer() add parmas as dictionary to consider all
+                possible values of required parameters w.r.t. each model.
