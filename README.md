@@ -106,6 +106,7 @@ Step 2:
             - Second, create save_object() function to save the pickle file at desired location.
             - Third, create evaluate_models() function to generate model performance report.
             - Fourth, in evaluate_models() function also add GridSearchCV() for hyperparameter tuning.
+            - Fifth, create load_object() function to load the existing pickle file.
 
 Step 3:
 
@@ -123,7 +124,7 @@ Step 3:
                 > initiating path varibales and making new directories,
                 > reading raw data file and saving train-test data files,
                 > logging the details and raising the exceptions.
-            - Add .artifacts in the .gitignore file in the Environments to avoid data save.
+            - Add .artifacts in the .gitignore file in the Environments to avoid data save. (can avoid)
 
         How to fill "data_transformation.py" file?
             - Aim: Perform feature engineering, data cleaning, handle categorical data, etc.
@@ -147,3 +148,42 @@ Step 3:
                 X-y split, all models, evaluation report and finds best model, save model and return R2.
             - Fourth, in the function initite_model_trainer() add parmas as dictionary to consider all
                 possible values of required parameters w.r.t. each model.
+
+Step 4:
+
+    On VS code,
+
+        Create one more file:
+            3. "app.py" (lists dependencies to install for Python project using pip).
+
+        Create one folder as well:
+            1. templates 
+                        (Inside, create files "index.html" (default page),
+                        "home.html" (input data fields for model prediction))
+
+        How to fill "app.py" file?
+            - At first, start with imports like flask, pandas, numpy, sklearn.
+            - Second, initialize the Flask application and assign it to the app.
+            - Third, define the home route with index() function for displaying homepage.
+            - Fourth, define predict_datapoint() function for taking user input and
+                displaying prediction using GET and POST method.
+            - Fifth, call CustomData() fn with extracted values from POST query.
+            - Sixth, call get_data_as_data_frame() fn to convert all values into a dataframe.
+
+Step 5:
+
+    On VS code, in src\pipeline folder:
+
+        How to fill "predict_pipeline.py" file?
+        - Aim: To make the web application interact with model.pkl, preprocessor.pkl and new input file.
+        - At first, import os, sys, exception, utils to load object.
+        - Second, create two classes: "PredictPipeline" and "CustomData".
+        - Third, define CustomData class:
+                > Purpose is to map user input from html page to backend. 
+                > Initiate all variables that are passed in as an input to __init__() function.
+                > Through this, it will be able to map the values with "home.html".
+                > get_data_as_data_frame() function maps user input values to the names and create dataframe.
+
+        - Fourth, define PredictPipeline class:
+                > Declare the model and preprocessor paths, load the pickle objects.
+                > Transform the features using preprocessor and predict using model.
