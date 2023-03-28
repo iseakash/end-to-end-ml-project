@@ -169,6 +169,7 @@ Step 4:
                 displaying prediction using GET and POST method.
             - Fifth, call CustomData() fn with extracted values from POST query.
             - Sixth, call get_data_as_data_frame() fn to convert all values into a dataframe.
+            - Seventh, call PredictPipeline class and its function predict() for prediction.
 
 Step 5:
 
@@ -182,8 +183,7 @@ Step 5:
                 > Purpose is to map user input from html page to backend. 
                 > Initiate all variables that are passed in as an input to __init__() function.
                 > Through this, it will be able to map the values with "home.html".
-                > get_data_as_data_frame() function maps user input values to the names and create dataframe.
-
+                > get_data_as_data_frame() function maps user input values to the names & create dataframe.
         - Fourth, define PredictPipeline class:
                 > Declare the model and preprocessor paths, load the pickle objects.
                 > Transform the features using preprocessor and predict using model.
