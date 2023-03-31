@@ -2,12 +2,14 @@
 
 ### Task:
 
-1. Setup github repository
+1. Setup github repository.
     - new environment
     - setup.py
     - requirements.txt
-2. Src folder and build the package
+2. Src folder and build the package.
 3. Component folder and code the data ingestion, data tranformation and model training.
+4. Pipeline folder and code the predict_pipeline and train_pipeline.
+5. AWS Elastic Bean App Deployment
     __________________________________________________________________________________________
 
 Step 1:
@@ -187,3 +189,16 @@ Step 5:
         - Fourth, define PredictPipeline class:
                 > Declare the model and preprocessor paths, load the pickle objects.
                 > Transform the features using preprocessor and predict using model.
+
+Step 6:
+
+    On VS code,
+
+        Two important configurations required for elastic beanstalk:
+
+        Create an extention folder named ".ebextensions".
+            Create a "python_config" file inside it.
+                - Purpose: Tell elastic bean the entry point of my application.
+                - Keep the app file name same as first name mentioned in this config file.
+                - Can remove "debug=True" in the app run.
+
