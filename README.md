@@ -197,8 +197,24 @@ Step 6:
         Two important configurations required for elastic beanstalk:
 
         Create an extention folder named ".ebextensions".
-            Create a "python_config" file inside it.
-                - Purpose: Tell elastic bean the entry point of my application.
-                - Keep the app file name same as first name mentioned in this config file.
-                - Can remove "debug=True" in the app run.
+        Create a "python_config" file inside it.
+            - Purpose: Tell elastic bean the entry point of my application.
+            - Keep the app file name same as first name mentioned in this config file.
+            - Can remove "debug=True" in the app run.
+
+Step 7:
+
+    On AWS console,
+
+        Go to Elastic Beanstalk and create an instance (a linux m/c) having environment & setup.
+            - Create a new application with some name.
+            - Select platform as "python3.8" and application code as "sample application".
+
+        Create a Code Pipeline to integrate Github repository with Elastic Beanstalk.
+            - This will help in stting up Continuous Delivery Pipeline.
+            - Go to Code Pipeline in AWS and create a new pipeline with same name may be.
+            - Select Source provider as "GitHub version 1", click confirm to authorise,
+                select specific repository and branch as "main" and use GitHub webhook.
+            - Skip Build Provider and in Deploy, select "AWS Elastic Beanstalk", select 
+                application name and environment name.
 
